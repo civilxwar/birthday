@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BIRTHDAY_SYSTEM</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="screen" id="boot-screen">
+      <div class="terminal-window">
+        <div class="terminal-header">
+          <span class="dot red"></span>
+          <span class="dot yellow"></span>
+          <span class="dot green"></span>
+          <span class="title">BIRTHDAY_SYSTEM</span>
+        </div>
+
+        <div class="terminal-body" id="boot-output"></div>
+      </div>
+    </div>
+
+    <div class="screen hidden" id="recovery-screen">
+      <div class="terminal-window critical">
+        <div class="terminal-header">
+          <span class="dot red"></span>
+          <span class="dot yellow"></span>
+          <span class="dot green"></span>
+          <span class="title">ALERT SYSTEMU</span>
+        </div>
+
+        <div class="terminal-body">
+          <p class="warning">⚠️ KRYTYCZNY BŁĄD</p>
+          <p>Wykryto nieoczekiwany error.</p>
+          <p>Wymagane jest przywrócenie systemu.</p>
+
+          <h2>KROK 1 — PRZYWRÓCENIE SYSTEMU</h2>
+          <p>Aby kontynuować, udowodnij, że jesteś właściwym odbiorcą.</p>
+
+          <div class="cipher-box">
+            <p class="label">ZASZYFROWANA WIADOMOŚĆ:</p>
+            <p class="cipher-text">K B W K X S L</p>
+            <p class="hint">Wskazówka: każda litera wyżej jest o jedną w prawo za daleko. (na klawiaturze xd)</p>
+          </div>
+
+          <div class="answer-block">
+            <label for="cipher-input">Twoja odpowiedź:</label>
+            <input id="cipher-input" type="text" maxlength="8" autocomplete="off" />
+            <button id="decrypt-button">Odszyfruj</button>
+          </div>
+
+          <p id="cipher-status" class="status-text"></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="screen hidden" id="restore-screen">
+      <div class="terminal-window restore-window">
+        <div class="terminal-header">
+          <span class="dot red"></span>
+          <span class="dot yellow"></span>
+          <span class="dot green"></span>
+          <span class="title">RESTORING</span>
+        </div>
+
+        <div class="terminal-body restore-body">
+          <p class="warning restore-warning">RESTORING...</p>
+          <p>Przywracanie protokołu urodzinowego.</p>
+          <p>Weryfikacja odbiorcy: zatwierdzona.</p>
+
+          <div class="progress-block">
+            <div class="progress-label">PROGRESS</div>
+            <div class="progress-wrap">
+              <div class="progress-fill" id="restore-progress"></div>
+            </div>
+            <div class="progress-percent" id="restore-percent">0%</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="screen hidden" id="final-screen">
+      <div class="final-panel">
+        <div class="success-badge">✓ ODSZYFROWANIE POWIODŁO SIĘ</div>
+        <h1>Protokół urodzinowy przywrócony.</h1>
+        <p class="subtitle">System rozpoznał właściwego odbiorcę.</p>
+
+        <div class="message-card">
+          <p>Najdrozszy janku xd,</p>
+          <p>
+            Z okazji twoich kolejnych urodzin życzę Ci żebyś żył mi tutaj jak najdłużej albo chociaż dzień dłużej niż ja, bo bez ciebie, to będzie dla mnie gg, już tyle razy składaliśmy sobie życzenia, że mogłabym powtarzać je w kółko co rok, bo co roku, każdego dnia chciałabym dla ciebie jak najlepiej, mimo, że czasami tego nie widać, naprawdę życzę Ci w te urodziny, lepszego życia, niech coś po prostu zmieni się na lepsze, małymi krokami, niech będzie lepiej, bo na to zasługujesz ❤️ Czego jeszcze można by ci życzyć, dużo by wymieniać, nie wiem, miłości radości, podstawowych rzeczy, żeby faktycznie się w życiu twoim pojawiły, życzę Ci żebyś nie połamał się kompletnie po 30stce do której już Ci nie daleko, życzę Ci miliardów randomowo zespawnionych na koncie, spełniania marzeń chociażby tych małych na które stać cię już teraz, trzeba tylko chcieć. No i życzę Ci żebyś odzyskał radość z gier, do gier, bo to jest 80% twojej osoby, to jest twoje hobby i tym żyjesz, życzę Ci z całego serca żeby coś pstryknęło i żeby ta radość z tego powróciła.
+          </p>
+          <p>
+            No i jeszcze na koniec luźniej standardowo, mniej debili w grach, samego złotego lootu, dragon lore z tygodniowej skrzynki, zero banicji, samych headow, umiejętności skipowania raidow, jebać żydów, wesołych świąt i jeszcze raz wszystkiego najlepszego z okazji urodzinnnnn!!!!
+          </p>
+        </div>
+
+        <div class="signature">Aktywowano protokół afektu</div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
